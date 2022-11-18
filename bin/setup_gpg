@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "Importing GitHub's webflow key..."
+curl https://github.com/web-flow.gpg | gpg --import
+gpg --sign-key 4AEE18F83AFDEB23
+
+"Setting up Git to use the gpg key..."
+git config --global commit.gpgsign true
+git config --global user.signingkey 4AEE18F83AFDEB23
