@@ -25,3 +25,8 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# DART-SPECIFIC - include PATH for Dart packages
+if [ -d "$HOME/.pub-cache/bin" ]; then
+    PATH="$PATH:$HOME/.pub-cache/bin"
+fi
