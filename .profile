@@ -14,6 +14,11 @@ if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
     fi
+
+    # mport homebrew by default
+    if [ "$(uname)" == "Darwin" ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
 fi
 
 # set PATH so it includes user's private bin if it exists
