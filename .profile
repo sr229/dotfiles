@@ -15,7 +15,7 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 
-    # mport homebrew by default
+    # import homebrew by default
     if [ "$(uname)" == "Darwin" ]; then
         eval "$(/opt/homebrew/bin/brew shellenv)"
     fi
@@ -37,6 +37,6 @@ if [ -d "$HOME/.pub-cache/bin" ]; then
 fi
 
 # ENCORE-SPECIFIC - This enables the Encore CLI
-if [-d "$HOME/.encore/bin"]; then
+if [ -d "$HOME/.encore/bin" ]; then
     PATH="$PATH:$HOME/.encore/bin"
 fi
