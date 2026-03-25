@@ -35,3 +35,8 @@ fi
 if [ -d "$HOME/.pub-cache/bin" ]; then
     PATH="$PATH:$HOME/.pub-cache/bin"
 fi
+
+# ENCORE-SPECIFIC - This enables the Encore CLI
+if [-d "$HOME/.encore/bin"]; then
+    PATH="$PATH:$HOME/.encore/bin"
+fi
